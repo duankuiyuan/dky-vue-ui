@@ -69,15 +69,9 @@
 </template>
 
 <script>
-import DkyRow from '@element/Row.vue';
-import DkyCol from '@element/Col.vue';
 
 export default {
   name: 'App',
-  components: {
-    DkyRow,
-    DkyCol,
-  },
 };
 </script>
 
