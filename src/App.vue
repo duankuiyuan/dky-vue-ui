@@ -33,7 +33,7 @@
       <dky-col :span="6" :pull="2"><div class="grid-content bg-purple">pull</div></dky-col>
     </dky-row>
       <h1>对齐方式 flex</h1>
-    <dky-row type="flex" class="row-bg">
+    <dky-row type="flex" class="row-bg" justify="end">
       <dky-col :span="6"><div class="grid-content bg-purple"></div></dky-col>
       <dky-col :span="6"><div class="grid-content bg-purple-light"></div></dky-col>
       <dky-col :span="6"><div class="grid-content bg-purple"></div></dky-col>
