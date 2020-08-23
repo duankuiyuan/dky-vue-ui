@@ -1,57 +1,8 @@
 <template>
 <div id="app">
-<dky-container>
-  <dky-header>Header</dky-header>
-  <dky-main>Main</dky-main>
-</dky-container>
-<hr>
-<dky-container>
-  <dky-header>Header</dky-header>
-  <dky-main>Main</dky-main>
-  <dky-footer>Footer</dky-footer>
-</dky-container>
-<hr>
-<dky-container>
-  <dky-aside width="200px">Aside</dky-aside>
-  <dky-main>Main</dky-main>
-</dky-container>
-<hr>
-<dky-container>
-  <dky-header>Header</dky-header>
-  <dky-container>
-    <dky-aside width="200px">Aside</dky-aside>
-    <dky-main>Main</dky-main>
-  </dky-container>
-</dky-container>
-<hr>
-<dky-container>
-  <dky-header>Header</dky-header>
-  <dky-container>
-    <dky-aside width="200px">Aside</dky-aside>
-    <dky-container>
-      <dky-main>Main</dky-main>
-      <dky-footer>Footer</dky-footer>
-    </dky-container>
-  </dky-container>
-</dky-container>
-<hr>
-<dky-container>
-  <dky-aside width="200px">Aside</dky-aside>
-  <dky-container>
-    <dky-header>Header</dky-header>
-    <dky-main>Main</dky-main>
-  </dky-container>
-</dky-container>
-<hr>
-<dky-container>
-  <dky-aside width="200px">Aside</dky-aside>
-  <dky-container>
-    <dky-header>Header</dky-header>
-    <dky-main>Main</dky-main>
-    <dky-footer>Footer</dky-footer>
-  </dky-container>
-</dky-container>
-  </div>
+  <dky-icon name="loading"></dky-icon>
+  <i class="el-icon-edit"></i>
+</div>
 </template>
 <script>
 export default {
