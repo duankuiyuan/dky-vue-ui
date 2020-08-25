@@ -6,6 +6,8 @@ import Footer from '@element/footer/index.js';
 import Header from '@element/header/index.js';
 import Main from '@element/main/index.js';
 import Icon from '@element/icon/index.js';
+import Button from '@element/button/index.js';
+import ButtonGroup from '@element/button-group/index.js';
 const components = [
     Row,
     Col,
@@ -14,7 +16,9 @@ const components = [
     Footer,
     Header,
     Main,
-    Icon
+    Icon,
+    Button,
+    ButtonGroup
 ]
 const install = (Vue) =>{
    components.forEach((component) =>{
@@ -30,7 +34,9 @@ export default{
     Footer,
     Header,
     Main,
-    Icon
+    Icon,
+    Button,
+    ButtonGroup
 }
 export {
     install,
@@ -40,5 +46,8 @@ export {
     Aside,
     Footer,
     Header,
-    Main
+    Main,
+    Icon,
+    Button,
+    ButtonGroup
 }
