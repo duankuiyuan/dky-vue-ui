@@ -10,6 +10,7 @@ import Button from '@element/button/index.js';
 import ButtonGroup from '@element/button-group/index.js';
 import Link from '@element/link/index.js';
 import Input from '@element/input/index.js';
+import Message from '@element/message/index.js';
 const components = [
     Row,
     Col,
@@ -28,7 +29,9 @@ const install = (Vue) =>{
    components.forEach((component) =>{
        Vue.component(component.name,component)
    });
+   Vue.prototype.$message = Message;
 }
+
 export default{
     install,
     Row,
@@ -42,7 +45,8 @@ export default{
     Button,
     ButtonGroup,
     Link,
-    Input
+    Input,
+    Message
 }
 export {
     install,
@@ -57,5 +61,6 @@ export {
     Button,
     ButtonGroup,
     Link,
-    Input
+    Input,
+    Message
 }

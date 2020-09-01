@@ -6,7 +6,7 @@
   'is-round': round,
   'is-circle': circle,
   'is-disabled': disabled
-  }]">
+  }]" @click="handleClick">
    <i :class="icon" v-if="icon && !loading"></i>
    <i class="el-icon-loading" v-if="loading"></i>
     <span v-if="$slots.default">
@@ -28,6 +28,11 @@ props:{
     disabled:Boolean,
     loading:Boolean,
     size: String,
+},
+methods:{
+  handleClick(evt){
+    this.$emit('click',evt)
+  }
 }
 }
 </script>

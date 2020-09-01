@@ -1,0 +1,57 @@
+@import "mixins/mixins.scss";
+@import "common/var";
+
+@include b(message){
+    min-width: $--message-min-width;
+    box-sizing: border-box;
+    border-radius: $--border-radius-base;
+    border-width: $--border-width-base;
+    border-style: $--border-style-base;
+    border-color: $--border-color-lighter;
+    position: fixed;
+    top: 20px;
+    left:50%;
+    transform:translateX(-50%);
+    transition: opacity 0.3s, transform .4s, top 0.4s;
+    display: flex;
+    background-color: $--message-background-color;
+    overflow: hidden;
+    padding: $--message-padding;
+    align-items: center;
+    @include when(center){
+      justify-content: center;
+    }
+    @include when(closeable){
+        padding-right: 16px;
+    }
+    @include m(success) {
+        background-color: $--color-success-lighter;
+        border-color: $--color-success-light;
+        color: $--message-success-font-color;
+    }
+    @include m(warning) {
+        background-color: $--color-warning-lighter;
+        border-color: $--color-warning-light;
+        color: $--message-warning-font-color;
+    }
+    @include m(error) {
+      background-color: $--color-danger-lighter;
+      border-color: $--color-danger-light;
+      color: $--message-danger-font-color;
+    }
+    .el-message__closeBtn{
+        position: absolute;
+        color:$--color-text-placeholder;
+        right:15px;
+        top:50%;
+        transform: translateY(-50%);
+        &:hover{
+          color:$--color-text-regular;
+        }
+    }
+}
+.el-message-fade-enter,
+.el-message-fade-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

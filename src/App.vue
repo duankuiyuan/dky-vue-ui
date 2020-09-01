@@ -1,61 +1,11 @@
 <template>
 <div id="app">
   <div class="dky-row">
-     <dky-input v-model="inputValue">
-
-    </dky-input>
+        <dky-button @click="$message.info('信息消息')">信息消息</dky-button>
+        <dky-button @click="success">成功消息</dky-button>
+        <dky-button @click="$message.warning('警告消息')">警告消息</dky-button>
+        <dky-button @click="$message.error('危险消息')">危险消息</dky-button>
   </div>
-  <div class="dky-row">
-     <dky-input disabled v-model="inputValue">
-
-    </dky-input>
-  </div>
-     <div class="dky-row">
-     <dky-input clearable v-model="inputValue">
-         
-    </dky-input>
-  </div>
-     <div class="dky-row">
-     <dky-input  prefix-icon="el-icon-search" v-model="inputValue">
-         
-    </dky-input>
-  </div>
-  <div class="dky-row">
-     <dky-input  suffix-icon="el-icon-date" v-model="inputValue">
-         
-    </dky-input>
-  </div>
-   <div class="dky-row">
-     <h5>slot方式</h5>
-     <dky-input v-model="inputValue">
-        <i slot="prefix" class="el-input__icon el-icon-date"></i>  
-          <i slot="suffix" class="el-input__icon el-icon-date"></i>  
-    </dky-input>
-  </div>
-   <div class="dky-row">
-     <dky-input prefix-icon="el-icon-search"  suffix-icon="el-icon-date" v-model="inputValue">
-         
-    </dky-input>
-  </div>
-  <div class="dky-row">
-    密码
-     <dky-input type="password" v-model="inputValue">
-         
-    </dky-input>
-  </div>
-  <div class="dky-row">
-    <dky-input prefix-icon="el-icon-search"  suffix-icon="el-icon-date" v-model="inputValue">
-         
-    </dky-input>
-    <dky-input prefix-icon="el-icon-search" size="medium" suffix-icon="el-icon-date" v-model="inputValue">
-         
-    </dky-input>
-    <dky-input prefix-icon="el-icon-search" size="small" suffix-icon="el-icon-date" v-model="inputValue">
-         
-    </dky-input>
-    <dky-input prefix-icon="el-icon-search" size="mini"  suffix-icon="el-icon-date" v-model="inputValue">
-         
-    </dky-input>
   </div>
 </div>
 </template>
@@ -68,10 +18,10 @@ export default {
     }
 
   },
-  mounted(){
-    // setInterval(() =>{
-    //   console.log(this.inputValue)
-    // },3000)
+  methods:{
+     success: function() {
+       this.$message.success({message:'成功',center:true,showClose:true})
+     }
   }
 };
 </script>
