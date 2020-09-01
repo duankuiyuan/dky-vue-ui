@@ -1,39 +1,86 @@
 <template>
 <div id="app">
-     <div>
-      <dky-link href="https://element.eleme.io" target="_blank">默认链接</dky-link>
-      <dky-link type="primary">主要链接</dky-link>
-      <dky-link type="success">成功链接</dky-link>
-      <dky-link type="warning">警告链接</dky-link>
-      <dky-link type="danger">危险链接</dky-link>
-      <dky-link type="info">信息链接</dky-link>
-    </div>
-    <div>
-      <dky-link disabled>默认链接</dky-link>
-      <dky-link type="primary" disabled>主要链接</dky-link>
-      <dky-link type="success" disabled>成功链接</dky-link>
-      <dky-link type="warning" disabled>警告链接</dky-link>
-      <dky-link type="danger" disabled>危险链接</dky-link>
-      <dky-link type="info" disabled>信息链接</dky-link>
-    </div>
-    <div>
-      <dky-link :underline="false">无下划线</dky-link>
-      <dky-link>有下划线</dky-link>
-    </div>
-    <div>
-      <dky-link icon="el-icon-edit">编辑</dky-link>
-      <dky-link>查看<i class="el-icon-view el-icon--right"></i> </dky-link>
-    </div>
+  <div class="dky-row">
+     <dky-input v-model="inputValue">
+
+    </dky-input>
+  </div>
+  <div class="dky-row">
+     <dky-input disabled v-model="inputValue">
+
+    </dky-input>
+  </div>
+     <div class="dky-row">
+     <dky-input clearable v-model="inputValue">
+         
+    </dky-input>
+  </div>
+     <div class="dky-row">
+     <dky-input  prefix-icon="el-icon-search" v-model="inputValue">
+         
+    </dky-input>
+  </div>
+  <div class="dky-row">
+     <dky-input  suffix-icon="el-icon-date" v-model="inputValue">
+         
+    </dky-input>
+  </div>
+   <div class="dky-row">
+     <h5>slot方式</h5>
+     <dky-input v-model="inputValue">
+        <i slot="prefix" class="el-input__icon el-icon-date"></i>  
+          <i slot="suffix" class="el-input__icon el-icon-date"></i>  
+    </dky-input>
+  </div>
+   <div class="dky-row">
+     <dky-input prefix-icon="el-icon-search"  suffix-icon="el-icon-date" v-model="inputValue">
+         
+    </dky-input>
+  </div>
+  <div class="dky-row">
+    密码
+     <dky-input type="password" v-model="inputValue">
+         
+    </dky-input>
+  </div>
+  <div class="dky-row">
+    <dky-input prefix-icon="el-icon-search"  suffix-icon="el-icon-date" v-model="inputValue">
+         
+    </dky-input>
+    <dky-input prefix-icon="el-icon-search" size="medium" suffix-icon="el-icon-date" v-model="inputValue">
+         
+    </dky-input>
+    <dky-input prefix-icon="el-icon-search" size="small" suffix-icon="el-icon-date" v-model="inputValue">
+         
+    </dky-input>
+    <dky-input prefix-icon="el-icon-search" size="mini"  suffix-icon="el-icon-date" v-model="inputValue">
+         
+    </dky-input>
+  </div>
 </div>
 </template>
 <script>
 export default {
   name: 'App',
+  data(){
+    return{
+      inputValue:""
+    }
+
+  },
+  mounted(){
+    // setInterval(() =>{
+    //   console.log(this.inputValue)
+    // },3000)
+  }
 };
 </script>
 
 <style lang="scss">
 .dky-row{
   margin-top:20px;
+}
+.dky-input{
+  width: 300px;
 }
 </style>

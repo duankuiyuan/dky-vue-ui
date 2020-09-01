@@ -1,0 +1,106 @@
+@import "./mixins/mixins.scss";
+@import"./common/var.scss";
+@include b(input){
+   display: inline-block;
+   position: relative;
+   box-sizing: border-box;
+   input{
+    box-sizing: border-box;;
+    width: 100%;
+   }
+   .dky-input__inner{
+       height:$--input-height;
+       line-height: $--input-height;
+       font-size:$--input-font-size;
+       color:$--input-font-color;
+       outline: none;
+       border:$--input-border;
+       border-radius: $--input-border-radius;
+       padding:0px 15px;
+       &::placeholder{
+        color: $--input-placeholder-color;
+       }
+       &:hover{
+           border-color:$--input-hover-border;
+       }
+       &:focus{
+           border-color:$--input-focus-border;
+       }
+   }
+   .el-input__suffix{
+    position: absolute;
+    height: 100%;
+    right: 5px;
+    top: 0;
+    text-align: center;
+   }
+   .el-input__prefix{
+    position: absolute;
+    left: 5px;
+    top: 0;
+   }
+   .el-input__icon{
+       line-height: $--input-height;
+       color: $--input-icon-color;
+       &.el-icon-circle-close,&.el-icon-view:hover{
+        color: $--color-text-secondary;  
+       }
+   }
+   @include m(suffix){
+    .dky-input__inner{
+        padding-right:30px;
+    }
+   }
+   @include m(prefix){
+    .dky-input__inner{
+        padding-left:30px;
+    }
+   }
+   @include m(medium){
+    .dky-input__inner{
+        height:$--input-medium-height;
+        line-height:$--input-medium-height;
+        font-size:$--input-medium-font-size;
+    }
+    .el-input__icon{
+        line-height: $--input-medium-height;
+        font-size:$--input-medium-font-size;
+    }
+   }
+   @include m(small){
+    .dky-input__inner{
+        height:$--input-small-height;
+        line-height: $--input-small-height;
+        font-size:$--input-small-font-size;
+       
+    }
+    .el-input__icon{
+        line-height: $--input-small-height;
+        font-size:$--input-small-font-size;
+    }
+   }
+   @include m(mini){
+    .dky-input__inner{
+        height:$--input-mini-height;
+        line-height: $--input-mini-height;
+        font-size:$--input-mini-font-size;
+       
+    }
+    .el-input__icon{
+        line-height: $--input-mini-height;
+        font-size:$--input-mini-font-size;
+    }
+   }
+ 
+}
+
+@include when(disabled){
+    .dky-input__inner{
+        cursor: not-allowed;
+        &:hover{
+            border:$--input-border;
+        }
+    }
+  
+} 
+ 

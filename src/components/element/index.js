@@ -9,6 +9,7 @@ import Icon from '@element/icon/index.js';
 import Button from '@element/button/index.js';
 import ButtonGroup from '@element/button-group/index.js';
 import Link from '@element/link/index.js';
+import Input from '@element/input/index.js';
 const components = [
     Row,
     Col,
@@ -20,7 +21,8 @@ const components = [
     Icon,
     Button,
     ButtonGroup,
-    Link
+    Link,
+    Input
 ]
 const install = (Vue) =>{
    components.forEach((component) =>{
@@ -39,7 +41,8 @@ export default{
     Icon,
     Button,
     ButtonGroup,
-    Link
+    Link,
+    Input
 }
 export {
     install,
@@ -53,5 +56,6 @@ export {
     Icon,
     Button,
     ButtonGroup,
-    Link
+    Link,
+    Input
 }
