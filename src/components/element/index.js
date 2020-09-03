@@ -11,6 +11,7 @@ import ButtonGroup from '@element/button-group/index.js';
 import Link from '@element/link/index.js';
 import Input from '@element/input/index.js';
 import Message from '@element/message/index.js';
+import InfiniteScroll from '@element/infinite-scroll/index.js';
 const components = [
     Row,
     Col,
@@ -23,12 +24,13 @@ const components = [
     Button,
     ButtonGroup,
     Link,
-    Input
+    Input,
 ]
 const install = (Vue) =>{
    components.forEach((component) =>{
        Vue.component(component.name,component)
    });
+   Vue.use(InfiniteScroll);
    Vue.prototype.$message = Message;
 }
 
@@ -46,7 +48,8 @@ export default{
     ButtonGroup,
     Link,
     Input,
-    Message
+    Message,
+    InfiniteScroll
 }
 export {
     install,
@@ -62,5 +65,6 @@ export {
     ButtonGroup,
     Link,
     Input,
-    Message
+    Message,
+    InfiniteScroll
 }

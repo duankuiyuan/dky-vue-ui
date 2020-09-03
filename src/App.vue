@@ -1,12 +1,15 @@
 <template>
 <div id="app">
-  <div class="dky-row">
-        <dky-button @click="$message.info('信息消息')">信息消息</dky-button>
-        <dky-button @click="success">成功消息</dky-button>
-        <dky-button @click="$message.warning('警告消息')">警告消息</dky-button>
-        <dky-button @click="$message.error('危险消息')">危险消息</dky-button>
-  </div>
-  </div>
+   <ul infinite-scroll-disabled="disabled" 
+   infinite-scroll-delay="delay" 
+   infinite-scroll-distance="distance"
+   infinite-scroll-immediate = "immediate"
+    v-infinite-scroll = "load" style="overflow:auto;height:500px;border:1px solid red;width:620px">
+       <li v-for="i in count" style="padding:10px;">
+            {{i}}
+       </li>
+   </ul>
+</div>
 </div>
 </template>
 <script>
@@ -14,14 +17,19 @@ export default {
   name: 'App',
   data(){
     return{
-      inputValue:""
+      inputValue:"",
+      count:20,
+      disabled:false,
+      delay:100,
+      distance:"10",
+      immediate:true
     }
 
   },
   methods:{
-     success: function() {
-       this.$message.success({message:'成功',center:true,showClose:true})
-     }
+    load(){
+      this.count +=2;
+    }
   }
 };
 </script>
